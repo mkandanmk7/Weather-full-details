@@ -46,14 +46,16 @@ function postWeather(data) {
     <div><h4 class="text-dark ms-4">Longtitue : ${lon}</h4></div>
     </div>
     `;
-    for (i = 1; i <= 10; i++) {
-      let dataTime = new Date(data.list[i].dt_txt);
-      // let hour = dateTime.getHours();
-      console.log(dataTime);
-      // let hour = dateTime.getHours();
+    for (let i = 1; i <= 10; i++) {
+      dateTime = new Date(data.list[i].dt_txt);
+
+      let hour = dateTime.getHours();
+      let date = new Date();
+      // let hours = date.getHours();
+
       // console.log(hour);
-      // date = dateTime.toDateString();
-      // console.log(date);
+      date = dateTime.toDateString();
+      console.log(date);
       let temp = Math.round(data.list[i].main.temp - 273);
       let feels = Math.round(data.list[i].main.feels_like - 273);
       let humidity = data.list[i].main.humidity;
@@ -74,17 +76,16 @@ function postWeather(data) {
       } else if (main_weather === "Rain") src = "/assets/rainy.png";
       else src = "/assets/sunny.png";
 
-      /* <div class="d-flex flex-column">
-      <div><p><b>${hour} hour</b></p></div>
-      <div><p>${date}</p></div>
-      </div> */
-
       displayInner.innerHTML += `
+
       <div class="hourlyCards">
       <div class="hourlyCard">
       <div class="mainCard d-flex justify-content-between" >
       
-
+      <div class="d-flex flex-column">
+      <div><p><b>${hour} hour</b></p></div>
+      <div><p>${date}</p></div>
+      </div> 
       <div><h1>${temp} <sup class="degree">o</sup>C</h1></div>
       <div><img class="WIcons" src=${src}></div>
       <div><p class="text-mured">Feels like ${feels}<sup class="degree">o</sup>C</p></div>
@@ -96,7 +97,7 @@ function postWeather(data) {
       <div><i class="fas fa-arrows-alt-v fIcons size1" onclick="resize(${i})"></i></div>
       </div>
 
-      <div class="innerCard innerCards${i}">
+      <div class="innerCard${i} innerCards">
       <div class="d-flex justify-content-between">
       <div class="w-50">
       <div class="itemBorder">${main_weather}</div>
@@ -154,10 +155,12 @@ function postWeather(data) {
       </div>
       `;
     }
-    // for (i = 2; i <= 10; i++) {
-    //   data = "innerCard" + i;
-    //   document.getElementsByClassName(data)[0].style.display = "none";
-    // }
+    for (let i = 2; i <= 10; i++) {
+      data = "innerCard" + i;
+      console.log(data);
+      document.getElementsByClassName(data)[0].style.display = "none";
+    }
+    // document.getElementsByClassName("innerCard2")[0].style.display = "none";
   }
 }
 function resize(i) {
