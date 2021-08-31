@@ -15,6 +15,7 @@ body {
 .navbar-brand {
   font-size: 2rem;
   font-weight: bold;
+
   color: rgb(226, 235, 235);
 }
 .nav {
@@ -23,7 +24,12 @@ body {
 }
 .time {
   font-size: 24px;
+
   filter: drop-shadow(2px 5px 6px);
+}
+.nowTime {
+  font-weight: bold;
+  filter: drop-shadow(2px 5px 10px);
 }
 /* .dayCards {
   display: flex;
@@ -41,7 +47,7 @@ body {
   width: 3rem;
 }
 .hourlyCard {
-  background-color: rgba(239, 243, 237, 0.3);
+  background-color: rgba(26, 27, 26, 0.2);
   box-shadow: 5px 5px 20px #fff;
   border-radius: 10px;
   margin: 20px 30px;
@@ -67,9 +73,10 @@ body {
   filter: drop-shadow(1px 5px 3px);
 }
 .itemBorder {
-  border-bottom: 1px solid rgb(175, 162, 162);
+  border-bottom: 1px solid rgb(250, 245, 245);
   padding-bottom: 5px;
   display: flex;
+  /* flex-direction: column; */
   flex-wrap: wrap;
 }
 .animate {

@@ -45,7 +45,7 @@ function postWeather(data) {
     console.log(H, M);
     // console.log(lat);
     displayInner.innerHTML = `<h2 class="text-center text-dark mb-4">weather Report for ${city} city</h2>
-    <div class="text-center"><h2>Time ${H} : ${M}</h2></div>
+    <div class="text-center nowTime"><h2>Time ${H} : ${M}</h2></div>
     <div class="d-flex justify-content-center mb-3">
     <div><h4 class="text-dark">Latitude:${lat}</h4></div>
     <div><h4 class="text-dark ms-4">Longtitue : ${lon}</h4></div>
@@ -149,8 +149,8 @@ function postWeather(data) {
       </div>
 
       <div class="d-flex justify-content-between itemBorder">
-      <div><p>Pop</p></div> 
-      <div ><p><b>${pop} </b></p></div>
+      
+      <div ><p>Pop  <b>${pop} </b></p></div>
       </div>
 
       </div>
