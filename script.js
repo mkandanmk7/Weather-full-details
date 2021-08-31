@@ -39,8 +39,13 @@ function postWeather(data) {
   } else {
     let lat = data.city.coord.lat;
     let lon = data.city.coord.lon;
+    let d = new Date();
+    let H = d.getHours();
+    let M = d.getMinutes();
+    console.log(H, M);
     // console.log(lat);
     displayInner.innerHTML = `<h2 class="text-center text-dark mb-4">weather Report for ${city} city</h2>
+    <div class="text-center"><h2>Time ${H} : ${M}</h2></div>
     <div class="d-flex justify-content-center mb-3">
     <div><h4 class="text-dark">Latitude:${lat}</h4></div>
     <div><h4 class="text-dark ms-4">Longtitue : ${lon}</h4></div>
@@ -83,7 +88,7 @@ function postWeather(data) {
       <div class="mainCard d-flex justify-content-between" >
       
       <div class="d-flex flex-column">
-      <div><p><b>${hour} hour</b></p></div>
+      <div class="time"><p><b>${hour} hour</b></p></div>
       <div><p>${date}</p></div>
       </div> 
       <div><h1>${temp} <sup class="degree">o</sup>C</h1></div>

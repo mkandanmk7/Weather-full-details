@@ -18,10 +18,14 @@ body {
   color: rgb(226, 235, 235);
 }
 .nav {
-  background-image: url(https://source.unsplash.com/p9BRX1mBfe4/1700x300);
+  background-image: url(/assets/weather.jpg);
   height: 17rem;
 }
-.dayCards {
+.time {
+  font-size: 24px;
+  filter: drop-shadow(2px 5px 6px);
+}
+/* .dayCards {
   display: flex;
   flex-wrap: wrap;
 
@@ -32,13 +36,13 @@ body {
   height: 15rem;
   background-color: white;
   border-radius: 10px;
-}
+} */
 .WIcons {
   width: 3rem;
 }
 .hourlyCard {
-  background-color: rgba(174, 221, 162, 0.3);
-  box-shadow: 2px 5px 10px;
+  background-color: rgba(239, 243, 237, 0.3);
+  box-shadow: 5px 5px 20px #fff;
   border-radius: 10px;
   margin: 20px 30px;
   padding: 20px;
