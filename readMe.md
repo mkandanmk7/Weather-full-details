@@ -1,4 +1,4 @@
-# Deployed Link [click here]()
+# Deployed Link [click here](https://nostalgic-boyd-72d9ba.netlify.app/)
 
 # you can get know about your city weather details here.
 
