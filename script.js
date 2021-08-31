@@ -3,7 +3,8 @@ let displayInner = document.querySelector(".displayInner");
 let size1 = document.querySelector("#size1");
 let innerCard1 = document.querySelector(".innerCard1");
 
-let city = "chennai";
+let city = "coimbatore";
+getWeather();
 async function getWeather() {
   console.log(city);
   let url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=367261ea67167733e6e17d88b7110e22`;
@@ -20,7 +21,6 @@ async function getWeather() {
   // }
 }
 
-// getWeather();
 function weather(data) {
   city = data;
   getWeather();

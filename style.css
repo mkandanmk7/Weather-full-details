@@ -63,8 +63,10 @@ body {
   filter: drop-shadow(1px 5px 3px);
 }
 .itemBorder {
-  border-bottom: 2px solid rgb(175, 162, 162);
+  border-bottom: 1px solid rgb(175, 162, 162);
   padding-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .animate {
   animation: fade 2s;
