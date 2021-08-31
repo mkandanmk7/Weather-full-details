@@ -1,0 +1,84 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+body {
+  background: linear-gradient(to right, #aff, #0cf);
+}
+.nav-link {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+  color: rgb(226, 235, 235);
+}
+.nav {
+  background-image: url(https://source.unsplash.com/p9BRX1mBfe4/1700x300);
+  height: 17rem;
+}
+.dayCards {
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-around;
+}
+.dayCard {
+  width: 15rem;
+  height: 15rem;
+  background-color: white;
+  border-radius: 10px;
+}
+.WIcons {
+  width: 3rem;
+}
+.hourlyCard {
+  background-color: rgba(174, 221, 162, 0.3);
+  box-shadow: 2px 5px 10px;
+  border-radius: 10px;
+  margin: 20px 30px;
+  padding: 20px;
+  width: 80%;
+}
+.fIcons {
+  font-size: 2rem;
+  color: #afc;
+  /* margin: 8px; */
+}
+.fIcons:hover {
+  transition: 0.2s;
+  transform: scale(1.2);
+  cursor: pointer;
+  filter: drop-shadow(1px 5px 5px #000);
+}
+
+.degree {
+  font-size: 60%;
+  font-weight: bold;
+
+  filter: drop-shadow(1px 5px 3px);
+}
+.itemBorder {
+  border-bottom: 2px solid rgb(175, 162, 162);
+  padding-bottom: 5px;
+}
+.animate {
+  animation: fade 2s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0.5;
+    transform: translate(70%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.hourlyCards {
+  margin-bottom: 2rem;
+}
